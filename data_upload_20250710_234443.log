@@ -1,0 +1,76 @@
+2025-07-10 23:44:43,689 - INFO - DB engine created successfully
+2025-07-10 23:44:43,690 - INFO - === OPTIMIZED DATA UPLOAD WORKFLOW STARTED ===
+2025-07-10 23:45:10,829 - INFO - Loaded Excel: 100825 rows, 17 columns
+2025-07-10 23:45:10,830 - INFO - Excel columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status', 'Percent Complete', 'Start Time', 'End Time', 'Elapsed Time', 'Byte Count', 'Job Rate', 'Error Code', 'Deduplication Ratio', 'Selections', 'Backup Method', 'Calculate Elapsed Time', 'System']
+2025-07-10 23:45:10,830 - INFO - Starting comprehensive data cleaning and transformation
+2025-07-10 23:45:10,830 - INFO - Cleaning NaN values across all columns...
+2025-07-10 23:45:18,683 - INFO - Total NaN representations cleaned: 0
+2025-07-10 23:45:18,847 - INFO - Moved 3617 misplaced backup method values from 'Selections' to 'Backup Method'
+2025-07-10 23:45:18,935 - INFO - Fixing 3462 rows with 'Partially Selected' in Deduplication Ratio
+2025-07-10 23:45:18,947 - INFO - System column value counts before filtering: {'Old': 85055, 'New': 15770}
+2025-07-10 23:45:19,060 - INFO - System filtering: Kept 15770 rows, dropped 85055 rows
+2025-07-10 23:45:19,177 - INFO - SQL table columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status', 'Percent Complete', 'Start Time', 'End Time', 'Elapsed Time', 'Byte Count', 'Job Rate', 'Error Code', 'Deduplication Ratio', 'Selections', 'Backup Method', 'Calculate Elapsed Time', 'System', 'ElapsedTimeSeconds', 'ByteCountBytes', 'JobRateBytesPerSec', 'CalculatedElapsedTimeSeconds']
+2025-07-10 23:45:19,187 - INFO - Validated columns: 17 columns retained
+2025-07-10 23:45:19,187 - INFO - Transforming data types based on SQL schema...
+2025-07-10 23:45:19,188 - INFO - Processing column Name (SQL type: nvarchar)
+2025-07-10 23:45:19,199 - INFO - Processing column Server (SQL type: nvarchar)
+2025-07-10 23:45:19,214 - INFO - Processing column Storage (SQL type: nvarchar)
+2025-07-10 23:45:19,225 - INFO - Processing column Job Type (SQL type: nvarchar)
+2025-07-10 23:45:19,238 - INFO - Processing column Job Status (SQL type: nvarchar)
+2025-07-10 23:45:19,250 - INFO - Processing column Percent Complete (SQL type: float)
+2025-07-10 23:45:19,251 - INFO - Processing column Start Time (SQL type: datetime)
+2025-07-10 23:45:19,489 - INFO - Processing column End Time (SQL type: datetime)
+2025-07-10 23:45:19,728 - INFO - Processing column Elapsed Time (SQL type: nvarchar)
+2025-07-10 23:45:19,749 - INFO - Processing column Byte Count (SQL type: nvarchar)
+2025-07-10 23:45:19,766 - INFO - Processing column Job Rate (SQL type: nvarchar)
+2025-07-10 23:45:19,780 - INFO - Processing column Error Code (SQL type: nvarchar)
+2025-07-10 23:45:19,789 - INFO - Processing column Deduplication Ratio (SQL type: nvarchar)
+2025-07-10 23:45:19,798 - INFO - Processing column Selections (SQL type: nvarchar)
+2025-07-10 23:45:19,808 - INFO - Processing column Backup Method (SQL type: varchar)
+2025-07-10 23:45:19,825 - INFO - Processing column Calculate Elapsed Time (SQL type: nvarchar)
+2025-07-10 23:45:19,889 - INFO - Processing column System (SQL type: nvarchar)
+2025-07-10 23:45:19,901 - INFO - Data type transformation completed
+2025-07-10 23:45:19,901 - INFO - Calculating derived columns...
+2025-07-10 23:45:20,069 - INFO - DataFrame reordered to 21 expected columns
+2025-07-10 23:45:20,103 - INFO - Final Name: 0 NULL values (0.0%)
+2025-07-10 23:45:20,105 - INFO - Final Server: 0 NULL values (0.0%)
+2025-07-10 23:45:20,106 - INFO - Final Storage: 105 NULL values (0.7%)
+2025-07-10 23:45:20,108 - INFO - Final Job Type: 0 NULL values (0.0%)
+2025-07-10 23:45:20,110 - INFO - Final Job Status: 0 NULL values (0.0%)
+2025-07-10 23:45:20,111 - INFO - Final Percent Complete: 3 NULL values (0.0%)
+2025-07-10 23:45:20,111 - INFO - Final Start Time: 0 NULL values (0.0%)
+2025-07-10 23:45:20,112 - INFO - Final End Time: 0 NULL values (0.0%)
+2025-07-10 23:45:20,114 - INFO - Final Elapsed Time: 0 NULL values (0.0%)
+2025-07-10 23:45:20,115 - INFO - Final Byte Count: 0 NULL values (0.0%)
+2025-07-10 23:45:20,117 - INFO - Final Job Rate: 30 NULL values (0.2%)
+2025-07-10 23:45:20,118 - INFO - Final Error Code: 15604 NULL values (98.9%)
+2025-07-10 23:45:20,118 - INFO - Final Deduplication Ratio: 15770 NULL values (100.0%)
+2025-07-10 23:45:20,119 - INFO - Final Selections: 12841 NULL values (81.4%)
+2025-07-10 23:45:20,120 - INFO - Final Backup Method: 12849 NULL values (81.5%)
+2025-07-10 23:45:20,122 - INFO - Final Calculate Elapsed Time: 0 NULL values (0.0%)
+2025-07-10 23:45:20,123 - INFO - Final System: 0 NULL values (0.0%)
+2025-07-10 23:45:20,123 - INFO - Final ElapsedTimeSeconds: 15 NULL values (0.1%)
+2025-07-10 23:45:20,125 - INFO - Final ByteCountBytes: 36 NULL values (0.2%)
+2025-07-10 23:45:20,126 - INFO - Final JobRateBytesPerSec: 3878 NULL values (24.6%)
+2025-07-10 23:45:20,127 - INFO - Final CalculatedElapsedTimeSeconds: 458 NULL values (2.9%)
+2025-07-10 23:45:20,127 - INFO - Data cleaning and transformation completed
+2025-07-10 23:45:23,690 - INFO - Truncated table dbo.FPTCOM_Sua (had 14701 rows)
+2025-07-10 23:45:23,696 - INFO - Starting upload of 15770 rows to FPTCOM_Sua
+2025-07-10 23:45:23,697 - INFO - Sample data being uploaded:
+2025-07-10 23:45:23,698 - INFO -   Name: ['FISHCM_HO_AF-Duplicate INCREMENTAL', 'FISHCM_HO_AF-Incremental', 'FISHCM_HO_PPD_XNK-Duplicate to HUB DC_INCREMENTAL']
+2025-07-10 23:45:23,701 - INFO -   Server: ['10.86.30.201', '10.86.30.201', '10.86.30.201']
+2025-07-10 23:45:23,703 - INFO -   Storage: ['FISHCM_HO_FAF_SITE 2', 'FISHCM_HO_FAF_SITE 1', 'FISHCM_HO_PPD_XNK_HUB DC_Media2']
+2025-07-10 23:45:23,706 - INFO -   Job Type: ['Duplicate', 'Backup', 'Duplicate']
+2025-07-10 23:45:23,708 - INFO -   Job Status: ['Successful', 'Successful', 'Successful']
+2025-07-10 23:45:24,737 - INFO - Successfully uploaded 15770 rows to FPTCOM_Sua
+2025-07-10 23:45:24,745 - INFO - Upload verified: 15770 rows in table
+2025-07-10 23:45:24,824 - INFO - Sample of uploaded data:
+                                                Name        Server  ... JobRateBytesPerSec CalculatedElapsedTimeSeconds
+0  FISHCM_HO_AF-Verify (Duplicate)_INCREMENTAL_To...  10.86.30.201  ...               None                          107
+1       FISHCM_HO_AF-Duplicate_INCREMENTAL_TO_MEDIA2  10.86.30.201  ...               None                          622
+2  FISHCM_HO_AF-Verify_INCREMENTAL (Duplicate)_To...  10.86.30.201  ...               None                          418
+
+[3 rows x 21 columns]
+2025-07-10 23:45:24,825 - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-07-10 23:45:24,826 - INFO - Database engine disposed
+2025-07-10 23:45:24,827 - INFO - Database engine disposed

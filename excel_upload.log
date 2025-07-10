@@ -1,0 +1,5 @@
+2025-07-10 23:37:56,758 - INFO - Database engine created.
+2025-07-10 23:37:56,759 - INFO - Reading Excel file: Combined_File.xlsx
+2025-07-10 23:38:24,090 - INFO - Read 100825 rows and 17 columns from the Excel file.
+2025-07-10 23:38:31,788 - INFO - Successfully uploaded 100825 rows to table 'AllData'.
+2025-07-10 23:38:31,789 - INFO - Database engine disposed.

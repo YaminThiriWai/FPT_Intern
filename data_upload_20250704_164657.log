@@ -1,0 +1,15 @@
+2025-07-04 16:46:57,544 - INFO - DB engine created successfully
+2025-07-04 16:46:57,545 - INFO - === OPTIMIZED DATA UPLOAD WORKFLOW STARTED ===
+2025-07-04 16:46:58,189 - INFO - Loaded Excel: 1068 rows, 17 columns
+2025-07-04 16:46:58,189 - INFO - Excel columns: ['FISHCM_HO_AF-Verify (Duplicate)_INCREMENTAL_To_MEDIA2', '10.86.30.201', 'FISHCM_HO_FAF_HUB_DC_MEDIA2', 'Verify', 'Successful', 1, datetime.datetime(2025, 6, 30, 23, 23, 32), datetime.datetime(2025, 6, 30, 23, 25, 19), datetime.time(0, 1, 47), '6.37 GB', '3 692.00 MB/min', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', '00:00:01:47', 'New']
+2025-07-04 16:46:58,190 - INFO - Starting comprehensive data cleaning and transformation
+2025-07-04 16:46:58,190 - INFO - Cleaning NaN values across all columns...
+2025-07-04 16:46:58,288 - INFO - Total NaN representations cleaned: 0
+2025-07-04 16:46:58,288 - WARNING - Selections or Backup Method column not found — skipping misplaced correction
+2025-07-04 16:46:58,289 - WARNING - System column not found - skipping system filtering
+2025-07-04 16:46:58,461 - INFO - SQL table columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status', 'Percent Complete', 'Start Time', 'End Time', 'Elapsed Time', 'Byte Count', 'Job Rate', 'Error Code', 'Deduplication Ratio', 'Selections', 'Backup Method', 'Calculate Elapsed Time', 'System', 'ElapsedTimeSeconds', 'ByteCountBytes', 'JobRateBytesPerSec', 'CalculatedElapsedTimeSeconds']
+2025-07-04 16:46:58,461 - WARNING - Excel columns not in SQL table: ['FISHCM_HO_AF-Verify (Duplicate)_INCREMENTAL_To_MEDIA2', '10.86.30.201', 'FISHCM_HO_FAF_HUB_DC_MEDIA2', 'Verify', 'Successful', 1, datetime.datetime(2025, 6, 30, 23, 23, 32), datetime.datetime(2025, 6, 30, 23, 25, 19), datetime.time(0, 1, 47), '6.37 GB', '3 692.00 MB/min', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', '00:00:01:47', 'New']
+2025-07-04 16:46:58,461 - ERROR - === WORKFLOW FAILED ===: No valid columns match between Excel and SQL table
+2025-07-04 16:46:58,462 - INFO - Database engine disposed
+2025-07-04 16:46:58,463 - ERROR - Main execution failed: No valid columns match between Excel and SQL table
+2025-07-04 16:46:58,463 - INFO - Database engine disposed
