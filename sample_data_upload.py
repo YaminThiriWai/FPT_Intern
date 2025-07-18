@@ -84,7 +84,7 @@ class DataUploadProcessor:
 
 
 if __name__ == "__main__":
-    excel_file_path = "Combined_File.xlsx"
+    excel_file_path = r"C:\Users\adminvm\Downloads\FPTCOM_Sua.xlsx"
 
     processor = DataUploadProcessor(table_name="AllData")
 

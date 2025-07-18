@@ -34,7 +34,7 @@ def combine_excel_files(main_file_path, other_file_path, output_file_path):
         sys.exit(1)
 
 if __name__ == "__main__":
-    # Replace these paths with your actual file paths
+    
     main_file = "Recovered_Main_File.xlsx"
     other_file = r"C:\Users\adminvm\Desktop\data June_2025.xlsx"
     output_file = "Combined_File.xlsx"

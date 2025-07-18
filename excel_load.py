@@ -129,7 +129,7 @@ class OptimizedDataUploadProcessor:
             self.logger.info(f"Loaded Excel: {len(self.df)} rows, {len(self.df.columns)} columns")
             
             # Log column names
-            self.logger.info(f"Excel columns: {self.df.columns.tolist()}")
+            self.logger.info(f"Excel file loaded with columns: {len(self.df.columns)}")
             
             return self
         except Exception as e:
@@ -145,7 +145,7 @@ class OptimizedDataUploadProcessor:
                 self.engine
             ).set_index('COLUMN_NAME').to_dict('index')
             
-            self.logger.info(f"SQL table columns: {list(self.sql_columns.keys())}")
+            self.logger.info(f"Loaded SQL schema for {len(self.sql_columns)} columns.")
             return self
         except Exception as e:
             self.logger.error(f"Failed to get SQL schema: {e}")
@@ -296,7 +296,7 @@ class OptimizedDataUploadProcessor:
             sql_type = sql_info['DATA_TYPE'].lower()
             max_len = sql_info['CHARACTER_MAXIMUM_LENGTH']
             
-            self.logger.info(f"Processing column {col} (SQL type: {sql_type})")
+            #self.logger.info(f"Processing column {col} (SQL type: {sql_type})")
             
             # Handle different SQL data types
             if sql_type in ['float', 'real', 'numeric', 'decimal']:
@@ -626,30 +626,39 @@ class OptimizedDataUploadProcessor:
             raise ValueError("No data to upload")
         
         try:
-            self.logger.info(f"Starting upload of {len(self.df)} rows to {self.table_name}")
+            # ======================================================================
+            # TESTING MODE - UNCOMMENT ONE OF THE LINES BELOW FOR LIMITED TESTING
+            # ======================================================================
+            # For testing with 10 rows:
+            #upload_df = self.df.head(10)
+            #upload_df = self.df.head(100)
+            #upload_df = self.df.head(500)
+            # ======================================================================
+            # PRODUCTION MODE - ALL DATA (DEFAULT)
+            upload_df = self.df
+            # ======================================================================
+            
+            self.logger.info(f"Starting upload of {len(upload_df)} rows to {self.table_name}")
             
             # Log sample data for debugging
             self.logger.info("Sample data being uploaded:")
-            for col in self.df.columns[:5]:  # Log first 5 columns
-                sample_vals = self.df[col].dropna().head(3).tolist()
-                self.logger.info(f"  {col}: {sample_vals}")
+            self.logger.info(f"Sample columns: {upload_df.columns[:5].tolist()}")
             
             # Upload with error handling
-            self.df.to_sql( #self.df.head(10).to_sql - to test 10 rows
+            upload_df.to_sql(
                 name=self.table_name,
                 con=self.engine,
                 schema='dbo',
                 if_exists='append',
                 index=False,
-                chunksize=1000, # for loading the whole data from excel file, uncomment if want to test a few rows
+                chunksize=1000,
                 dtype=getattr(self, 'dtype_mapping', None)
             )
 
-
-            self.logger.info(f"Successfully uploaded {len(self.df)} rows to {self.table_name}")
+            self.logger.info(f"Successfully uploaded {len(upload_df)} rows to {self.table_name}")
             
             # Verify upload
-            self._verify_upload()
+            self._verify_upload(len(upload_df))
             
         except Exception as e:
             self.logger.error(f"Upload failed: {e}")
@@ -659,7 +668,7 @@ class OptimizedDataUploadProcessor:
             self.logger.error(f"Data types: {self.df.dtypes.to_dict()}")
             raise
 
-    def _verify_upload(self):
+    def _verify_upload(self, expected_count):
         """Verify the upload was successful"""
         try:
             with self.engine.connect() as conn:
@@ -669,7 +678,7 @@ class OptimizedDataUploadProcessor:
                     conn
                 ).iloc[0, 0]
                 
-                if final_count == len(self.df):
+                if final_count == expected_count:
                     self.logger.info(f"Upload verified: {final_count} rows in table")
                 else:
                     self.logger.error(f"Row count mismatch: Expected {len(self.df)}, found {final_count}")
@@ -752,7 +761,7 @@ class OptimizedDataUploadProcessor:
 if __name__ == "__main__":
     # Initialize processor
     processor = OptimizedDataUploadProcessor(
-        excel_path="Combined_File.xlsx",
+        excel_path=r"C:\Users\adminvm\Downloads\FPTCOM_Sua.xlsx",
         table_name="FPTCOM_Sua"
     )
     
