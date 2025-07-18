@@ -13,10 +13,6 @@ from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
 
 class OptimizedDataUploadProcessor:
-    """
-    Optimized data upload processor with robust null handling and reliable SQL insertion.
-    Combines best practices from both original scripts for maximum reliability.
-    """
     
     def __init__(self, excel_path: str, table_name: str = 'FPTCOM_Sua'):
         self.excel_path = Path(excel_path)
@@ -35,7 +31,7 @@ class OptimizedDataUploadProcessor:
             'CalculatedElapsedTimeSeconds'
         ]
         
-        # Comprehensive null representations (from first script)
+        # Comprehensive null representations
         self.nan_representations = {
             'nan', 'null', 'none', 'n/a', 'na', '#n/a', '#null!', '',
             'missing', 'unknown', '-', 'n.a.', 'n/a.', 'na.', 'nil'
@@ -101,7 +97,6 @@ class OptimizedDataUploadProcessor:
 
     def clean_nan_values(self, value):
         """
-        Comprehensive NaN cleaning (from first script - proven to work)
         Convert various representations of NaN/null to None for database consistency
         """
         if pd.isna(value) or pd.isnull(value):
@@ -158,7 +153,7 @@ class OptimizedDataUploadProcessor:
 
         self.logger.info("Starting comprehensive data cleaning and transformation")
         
-        # Clean all NaN values across entire DataFrame (from first script)
+        # Clean all NaN values across entire DataFrame 
         self._clean_all_nan_values()
 
         # detect and fix misplaced "Backup Method" values in the Selections column
@@ -283,7 +278,7 @@ class OptimizedDataUploadProcessor:
                 self.df.loc[mask, 'Deduplication Ratio'] = None
 
     def _transform_data_types(self):
-        """Transform data types based on SQL schema (from first script logic)"""
+        """Transform data types based on SQL schema"""
         self.logger.info("Transforming data types based on SQL schema...")
         
         dtype_mapping = {}
