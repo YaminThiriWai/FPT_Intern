@@ -2,7 +2,7 @@
 
 The `upload_data()` function in the script is designed to support both **test uploads** and **full production uploads**.
 
-### 🔬 Test Mode (Subset of Rows)
+### Test Mode (Subset of Rows)
 
 If you want to test the SQL upload with a small number of rows, simply **uncomment** one of the following lines:
 
