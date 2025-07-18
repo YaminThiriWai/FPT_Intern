@@ -1,0 +1,74 @@
+2025-07-11 09:49:09,023 - INFO - DB engine created successfully
+2025-07-11 09:49:09,024 - INFO - === OPTIMIZED DATA UPLOAD WORKFLOW STARTED ===
+2025-07-11 09:49:34,860 - INFO - Loaded Excel: 100825 rows, 17 columns
+2025-07-11 09:49:34,861 - INFO - Excel columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status', 'Percent Complete', 'Start Time', 'End Time', 'Elapsed Time', 'Byte Count', 'Job Rate', 'Error Code', 'Deduplication Ratio', 'Selections', 'Backup Method', 'Calculate Elapsed Time', 'System']
+2025-07-11 09:49:34,862 - INFO - Starting comprehensive data cleaning and transformation
+2025-07-11 09:49:34,863 - INFO - Cleaning NaN values across all columns...
+2025-07-11 09:49:40,020 - INFO - Total NaN representations cleaned: 0
+2025-07-11 09:49:40,171 - INFO - Moved 3617 misplaced backup method values from 'Selections' to 'Backup Method'
+2025-07-11 09:49:40,235 - INFO - Fixing 3462 rows with 'Partially Selected' in Deduplication Ratio
+2025-07-11 09:49:40,245 - INFO - System column value counts before filtering: {'Old': 85055, 'New': 15770}
+2025-07-11 09:49:40,340 - INFO - System filtering: Kept 15770 rows, dropped 85055 rows
+2025-07-11 09:49:40,574 - INFO - SQL table columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status', 'Percent Complete', 'Start Time', 'End Time', 'Elapsed Time', 'Byte Count', 'Job Rate', 'Error Code', 'Deduplication Ratio', 'Selections', 'Backup Method', 'Calculate Elapsed Time', 'System', 'ElapsedTimeSeconds', 'ByteCountBytes', 'JobRateBytesPerSec', 'CalculatedElapsedTimeSeconds']
+2025-07-11 09:49:40,583 - INFO - Validated columns: 17 columns retained
+2025-07-11 09:49:40,584 - INFO - Transforming data types based on SQL schema...
+2025-07-11 09:49:40,584 - INFO - Processing column Name (SQL type: nvarchar)
+2025-07-11 09:49:40,595 - INFO - Processing column Server (SQL type: nvarchar)
+2025-07-11 09:49:40,606 - INFO - Processing column Storage (SQL type: nvarchar)
+2025-07-11 09:49:40,617 - INFO - Processing column Job Type (SQL type: nvarchar)
+2025-07-11 09:49:40,628 - INFO - Processing column Job Status (SQL type: nvarchar)
+2025-07-11 09:49:40,641 - INFO - Processing column Percent Complete (SQL type: float)
+2025-07-11 09:49:40,641 - INFO - Processing column Start Time (SQL type: datetime)
+2025-07-11 09:49:40,836 - INFO - Processing column End Time (SQL type: datetime)
+2025-07-11 09:49:41,035 - INFO - Processing column Elapsed Time (SQL type: nvarchar)
+2025-07-11 09:49:41,046 - INFO - Processing column Byte Count (SQL type: nvarchar)
+2025-07-11 09:49:41,057 - INFO - Processing column Job Rate (SQL type: nvarchar)
+2025-07-11 09:49:41,070 - INFO - Processing column Error Code (SQL type: nvarchar)
+2025-07-11 09:49:41,079 - INFO - Processing column Deduplication Ratio (SQL type: nvarchar)
+2025-07-11 09:49:41,093 - INFO - Processing column Selections (SQL type: nvarchar)
+2025-07-11 09:49:41,105 - INFO - Processing column Backup Method (SQL type: varchar)
+2025-07-11 09:49:41,115 - INFO - Processing column Calculate Elapsed Time (SQL type: nvarchar)
+2025-07-11 09:49:41,126 - INFO - Processing column System (SQL type: nvarchar)
+2025-07-11 09:49:41,138 - INFO - Data type transformation completed
+2025-07-11 09:49:41,139 - INFO - Calculating derived columns...
+2025-07-11 09:49:41,300 - INFO - DataFrame reordered to 21 expected columns
+2025-07-11 09:49:41,328 - INFO - Final Name: 0 NULL values (0.0%)
+2025-07-11 09:49:41,330 - INFO - Final Server: 0 NULL values (0.0%)
+2025-07-11 09:49:41,331 - INFO - Final Storage: 105 NULL values (0.7%)
+2025-07-11 09:49:41,332 - INFO - Final Job Type: 0 NULL values (0.0%)
+2025-07-11 09:49:41,334 - INFO - Final Job Status: 0 NULL values (0.0%)
+2025-07-11 09:49:41,334 - INFO - Final Percent Complete: 3 NULL values (0.0%)
+2025-07-11 09:49:41,335 - INFO - Final Start Time: 0 NULL values (0.0%)
+2025-07-11 09:49:41,335 - INFO - Final End Time: 0 NULL values (0.0%)
+2025-07-11 09:49:41,337 - INFO - Final Elapsed Time: 0 NULL values (0.0%)
+2025-07-11 09:49:41,338 - INFO - Final Byte Count: 0 NULL values (0.0%)
+2025-07-11 09:49:41,340 - INFO - Final Job Rate: 30 NULL values (0.2%)
+2025-07-11 09:49:41,341 - INFO - Final Error Code: 15604 NULL values (98.9%)
+2025-07-11 09:49:41,342 - INFO - Final Deduplication Ratio: 15770 NULL values (100.0%)
+2025-07-11 09:49:41,343 - INFO - Final Selections: 12841 NULL values (81.4%)
+2025-07-11 09:49:41,344 - INFO - Final Backup Method: 12849 NULL values (81.5%)
+2025-07-11 09:49:41,346 - INFO - Final Calculate Elapsed Time: 0 NULL values (0.0%)
+2025-07-11 09:49:41,349 - INFO - Final System: 0 NULL values (0.0%)
+2025-07-11 09:49:41,349 - INFO - Final ElapsedTimeSeconds: 15 NULL values (0.1%)
+2025-07-11 09:49:41,350 - INFO - Final ByteCountBytes: 36 NULL values (0.2%)
+2025-07-11 09:49:41,350 - INFO - Final JobRateBytesPerSec: 3878 NULL values (24.6%)
+2025-07-11 09:49:41,351 - INFO - Final CalculatedElapsedTimeSeconds: 458 NULL values (2.9%)
+2025-07-11 09:49:41,351 - INFO - Data cleaning and transformation completed
+2025-07-11 09:49:43,637 - INFO - Truncated table dbo.FPTCOM_Sua (had 15770 rows)
+2025-07-11 09:49:43,640 - INFO - Starting upload of 10 rows to FPTCOM_Sua
+2025-07-11 09:49:43,640 - INFO - Sample data being uploaded:
+2025-07-11 09:49:43,641 - INFO -   Name: ['FISHCM_HO_AF-Duplicate INCREMENTAL', 'FISHCM_HO_AF-Incremental', 'FISHCM_HO_PPD_XNK-Duplicate to HUB DC_INCREMENTAL']
+2025-07-11 09:49:43,642 - INFO -   Server: ['10.86.30.201', '10.86.30.201', '10.86.30.201']
+2025-07-11 09:49:43,643 - INFO -   Storage: ['FISHCM_HO_FAF_SITE 2', 'FISHCM_HO_FAF_SITE 1', 'FISHCM_HO_PPD_XNK_HUB DC_Media2']
+2025-07-11 09:49:43,643 - INFO -   Job Type: ['Duplicate', 'Backup', 'Duplicate']
+2025-07-11 09:49:43,644 - INFO -   Job Status: ['Successful', 'Successful', 'Successful']
+2025-07-11 09:49:43,670 - INFO - Successfully uploaded 10 rows to FPTCOM_Sua
+2025-07-11 09:49:43,670 - ERROR - Upload failed: OptimizedDataUploadProcessor._verify_upload() takes 1 positional argument but 2 were given
+2025-07-11 09:49:43,671 - ERROR - DataFrame info for debugging:
+2025-07-11 09:49:43,671 - ERROR - Shape: (15770, 21)
+2025-07-11 09:49:43,671 - ERROR - Columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status', 'Percent Complete', 'Start Time', 'End Time', 'Elapsed Time', 'Byte Count', 'Job Rate', 'Error Code', 'Deduplication Ratio', 'Selections', 'Backup Method', 'Calculate Elapsed Time', 'System', 'ElapsedTimeSeconds', 'ByteCountBytes', 'JobRateBytesPerSec', 'CalculatedElapsedTimeSeconds']
+2025-07-11 09:49:43,672 - ERROR - Data types: {'Name': dtype('O'), 'Server': dtype('O'), 'Storage': dtype('O'), 'Job Type': dtype('O'), 'Job Status': dtype('O'), 'Percent Complete': dtype('float64'), 'Start Time': dtype('<M8[ns]'), 'End Time': dtype('<M8[ns]'), 'Elapsed Time': dtype('O'), 'Byte Count': dtype('O'), 'Job Rate': dtype('O'), 'Error Code': dtype('O'), 'Deduplication Ratio': dtype('O'), 'Selections': dtype('O'), 'Backup Method': dtype('O'), 'Calculate Elapsed Time': dtype('O'), 'System': dtype('O'), 'ElapsedTimeSeconds': dtype('float64'), 'ByteCountBytes': dtype('float64'), 'JobRateBytesPerSec': dtype('float64'), 'CalculatedElapsedTimeSeconds': dtype('float64')}
+2025-07-11 09:49:43,672 - ERROR - === WORKFLOW FAILED ===: OptimizedDataUploadProcessor._verify_upload() takes 1 positional argument but 2 were given
+2025-07-11 09:49:43,673 - INFO - Database engine disposed
+2025-07-11 09:49:43,673 - ERROR - Main execution failed: OptimizedDataUploadProcessor._verify_upload() takes 1 positional argument but 2 were given
+2025-07-11 09:49:43,674 - INFO - Database engine disposed

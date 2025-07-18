@@ -1,5 +1,5 @@
-2025-07-10 23:37:56,758 - INFO - Database engine created.
-2025-07-10 23:37:56,759 - INFO - Reading Excel file: Combined_File.xlsx
-2025-07-10 23:38:24,090 - INFO - Read 100825 rows and 17 columns from the Excel file.
-2025-07-10 23:38:31,788 - INFO - Successfully uploaded 100825 rows to table 'AllData'.
-2025-07-10 23:38:31,789 - INFO - Database engine disposed.
+2025-07-11 13:52:25,764 - INFO - Database engine created.
+2025-07-11 13:52:25,766 - INFO - Reading Excel file: C:\Users\adminvm\Downloads\FPTCOM_Sua.xlsx
+2025-07-11 13:52:41,558 - INFO - Read 101929 rows and 17 columns from the Excel file.
+2025-07-11 13:52:49,306 - INFO - Successfully uploaded 101929 rows to table 'AllData'.
+2025-07-11 13:52:49,307 - INFO - Database engine disposed.

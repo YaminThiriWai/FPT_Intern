@@ -1,0 +1,55 @@
+2025-07-11 17:16:35,145 - INFO - DB engine created successfully
+2025-07-11 17:16:35,145 - INFO - === OPTIMIZED DATA UPLOAD WORKFLOW STARTED ===
+2025-07-11 17:16:51,022 - INFO - Loaded Excel: 101929 rows, 17 columns
+2025-07-11 17:16:51,023 - INFO - Excel file loaded with columns: 17
+2025-07-11 17:16:51,024 - INFO - Starting comprehensive data cleaning and transformation
+2025-07-11 17:16:51,024 - INFO - Cleaning NaN values across all columns...
+2025-07-11 17:16:57,445 - INFO - Total NaN representations cleaned: 0
+2025-07-11 17:16:57,613 - INFO - Moved 3777 misplaced backup method values from 'Selections' to 'Backup Method'
+2025-07-11 17:16:57,687 - INFO - Fixing 3622 rows with 'Partially Selected' in Deduplication Ratio
+2025-07-11 17:16:57,703 - INFO - System column value counts before filtering: {'Old': 85055, 'New': 16874}
+2025-07-11 17:16:57,819 - INFO - System filtering: Kept 16874 rows, dropped 85055 rows
+2025-07-11 17:16:57,978 - INFO - Loaded SQL schema for 21 columns.
+2025-07-11 17:16:57,989 - INFO - Validated columns: 17 columns retained
+2025-07-11 17:16:57,989 - INFO - Transforming data types based on SQL schema...
+2025-07-11 17:16:58,181 - INFO - Data type transformation completed
+2025-07-11 17:16:58,182 - INFO - Calculating derived columns...
+2025-07-11 17:16:58,359 - INFO - DataFrame reordered to 21 expected columns
+2025-07-11 17:16:58,387 - INFO - Final Name: 0 NULL values (0.0%)
+2025-07-11 17:16:58,388 - INFO - Final Server: 0 NULL values (0.0%)
+2025-07-11 17:16:58,390 - INFO - Final Storage: 108 NULL values (0.6%)
+2025-07-11 17:16:58,391 - INFO - Final Job Type: 0 NULL values (0.0%)
+2025-07-11 17:16:58,392 - INFO - Final Job Status: 0 NULL values (0.0%)
+2025-07-11 17:16:58,392 - INFO - Final Percent Complete: 3 NULL values (0.0%)
+2025-07-11 17:16:58,393 - INFO - Final Start Time: 0 NULL values (0.0%)
+2025-07-11 17:16:58,393 - INFO - Final End Time: 0 NULL values (0.0%)
+2025-07-11 17:16:58,395 - INFO - Final Elapsed Time: 0 NULL values (0.0%)
+2025-07-11 17:16:58,396 - INFO - Final Byte Count: 0 NULL values (0.0%)
+2025-07-11 17:16:58,398 - INFO - Final Job Rate: 32 NULL values (0.2%)
+2025-07-11 17:16:58,399 - INFO - Final Error Code: 16703 NULL values (99.0%)
+2025-07-11 17:16:58,399 - INFO - Final Deduplication Ratio: 16874 NULL values (100.0%)
+2025-07-11 17:16:58,400 - INFO - Final Selections: 13785 NULL values (81.7%)
+2025-07-11 17:16:58,401 - INFO - Final Backup Method: 13793 NULL values (81.7%)
+2025-07-11 17:16:58,403 - INFO - Final Calculate Elapsed Time: 0 NULL values (0.0%)
+2025-07-11 17:16:58,408 - INFO - Final System: 0 NULL values (0.0%)
+2025-07-11 17:16:58,409 - INFO - Final ElapsedTimeSeconds: 15 NULL values (0.1%)
+2025-07-11 17:16:58,410 - INFO - Final ByteCountBytes: 36 NULL values (0.2%)
+2025-07-11 17:16:58,411 - INFO - Final JobRateBytesPerSec: 4429 NULL values (26.2%)
+2025-07-11 17:16:58,412 - INFO - Final CalculatedElapsedTimeSeconds: 489 NULL values (2.9%)
+2025-07-11 17:16:58,412 - INFO - Data cleaning and transformation completed
+2025-07-11 17:17:00,443 - INFO - Truncated table dbo.FPTCOM_Sua (had 16874 rows)
+2025-07-11 17:17:00,444 - INFO - Starting upload of 16874 rows to FPTCOM_Sua
+2025-07-11 17:17:00,445 - INFO - Sample data being uploaded:
+2025-07-11 17:17:00,446 - INFO - Sample columns: ['Name', 'Server', 'Storage', 'Job Type', 'Job Status']
+2025-07-11 17:17:01,489 - INFO - Successfully uploaded 16874 rows to FPTCOM_Sua
+2025-07-11 17:17:01,500 - INFO - Upload verified: 16874 rows in table
+2025-07-11 17:17:01,562 - INFO - Sample of uploaded data:
+                                                Name        Server  ... JobRateBytesPerSec CalculatedElapsedTimeSeconds
+0  FISHCM_HO_AF-Verify (Duplicate)_INCREMENTAL_To...  10.86.30.201  ...               None                          107
+1       FISHCM_HO_AF-Duplicate_INCREMENTAL_TO_MEDIA2  10.86.30.201  ...               None                          622
+2  FISHCM_HO_AF-Verify_INCREMENTAL (Duplicate)_To...  10.86.30.201  ...               None                          418
+
+[3 rows x 21 columns]
+2025-07-11 17:17:01,563 - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-07-11 17:17:01,564 - INFO - Database engine disposed
+2025-07-11 17:17:01,565 - INFO - Database engine disposed
